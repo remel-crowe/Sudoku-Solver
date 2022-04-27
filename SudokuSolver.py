@@ -43,7 +43,7 @@ def valid(brd, num, pos):
         if brd[i][pos[1]] == num and pos[0] != i:
             return False
 
-    # Check brdx
+    # Check surrounding box
     pos_x = pos[1] // 3
     pos_y = pos[0] // 3
 
@@ -78,9 +78,11 @@ def find_empty(brd):
 
     return None
 
+
+
 display_board(board)
 solve(board)
-print("-------------------")
+print("SOLVED:" + '\n')
 display_board(board)
                 
     
